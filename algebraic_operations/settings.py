@@ -30,11 +30,16 @@ SECRET_KEY = Env.SECRET_KEY
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = Env.DEBUG
 
-ALLOWED_HOSTS = Env.ALLOWED_HOSTS
+# ALLOWED_HOSTS = Env.ALLOWED_HOSTS
+ALLOWED_HOSTS = ["*"]
 
 # Application definition
 
 INSTALLED_APPS = [
+    'algebraic_operations.operations',
+
+    'rest_framework',
+
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -95,8 +100,8 @@ else:
         'default': {
             'ENGINE': 'django.db.backends.postgresql_psycopg2',
             'NAME': os.getenv('DATABASE_NAME', 'algebraic_db'),
-            'USER': os.getenv('POSTGRES_USER', 'user'),
-            'PASSWORD': os.getenv('POSTGRES_PASSWORD', 'password'),
+            'USER': os.getenv('POSTGRES_USER', 'gayanem'),
+            'PASSWORD': os.getenv('POSTGRES_PASSWORD', 'root2018'),
             'HOST': os.getenv('HOSTNAME', '127.0.0.1'),
             'PORT': '5432',
         }

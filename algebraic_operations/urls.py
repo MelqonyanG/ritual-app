@@ -17,6 +17,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from algebraic_operations.operations.views.views import (
+    OperationsHistoryView,
+    EvaluateOperationView,
+)
+
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('history/', OperationsHistoryView.as_view(), name='operations-history'),
+    path('evaluate/', EvaluateOperationView.as_view(), name='evaluate-operation'),
 ]
