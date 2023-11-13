@@ -38,7 +38,9 @@ ALLOWED_HOSTS = ["*"]
 INSTALLED_APPS = [
     'algebraic_operations.operations',
 
+    'rest_framework_swagger',
     'rest_framework',
+    'drf_yasg',
 
     'django.contrib.admin',
     'django.contrib.auth',
