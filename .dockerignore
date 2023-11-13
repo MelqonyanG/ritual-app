@@ -1,0 +1,8 @@
+.git
+.gitignore
+.gitlab
+docs/
+docker-compose.yml
+README.md
+*/tests*
+pylint.txt

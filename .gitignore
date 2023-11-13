@@ -1,0 +1,29 @@
+# Ignore system files and directories
+*.*~
+.DS_Store
+.vscode/
+
+# Ignore Python related files
+*.py[cod]
+__pycache__/
+.cache/
+build/
+dist/
+wheels/
+.coverage
+coverage.xml
+htmlcov/
+docs/_build/
+docs/_static/
+docs/_templates/
+.idea/
+.venv/
+
+# Django related stuff
+db.sqlite3
+staticfiles/
+
+env.sh
+*.un~
+*.swp
+tags
