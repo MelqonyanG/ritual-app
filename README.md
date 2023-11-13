@@ -5,10 +5,21 @@ Djnago application that allows users to efficiently evaluate algebraic expressio
 # Usage
 ## Endpoints
 
+### /docs
+Description: Access the Swagger documentation page for detailed API information and usage.
+
+Method: GET
+
+Open this endpoint in a web browser to interact with and understand the available endpoints and their functionalities.
+
+
 ### /history
 Method: GET
+
 Parameters: page_size and page_number (optional)
+
 Description: Retrieve the history of operations with pagination support.
+
 Response:
 ```
 {
@@ -32,13 +43,16 @@ Response:
 
 ### /evaluate
 Method: POST
+
 Body: 
 ```
 {
     "expression": "3 + abs(-5) * len('hello')"
 }
 ```
+
 Description: Submit algebraic expressions for evaluation.
+
 Response:
 ```
 {
@@ -48,8 +62,8 @@ Response:
 
 
 # Technologies Used
-Django Framework
-PostgreSQL
+- Django Framework
+- PostgreSQL
 
 
 # Setup and Running
@@ -59,4 +73,9 @@ This application is Dockerized and uses Docker Compose for setup. To run the app
 - Clone the [repository](https://github.com/MelqonyanG/ritual-app.git).
 - Navigate to the project directory.
 - Run **docker-compose up** to start the application.
+
+# Accessing Swagger Documentation
+Once the application is running, access the Swagger documentation by navigating to http://your_server_address/docs in your web browser.
+
+This documentation will provide detailed information on the available endpoints, their functionalities, request formats, and response structures.
 
