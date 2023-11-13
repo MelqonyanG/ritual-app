@@ -30,7 +30,7 @@ SECRET_KEY = Env.SECRET_KEY
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = Env.DEBUG
 
-ALLOWED_HOSTS = Env.ALLOWED_HOSTS
+ALLOWED_HOSTS = ["*"]
 
 # Application definition
 

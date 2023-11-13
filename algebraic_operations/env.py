@@ -25,7 +25,6 @@ class Env:
     """
     SECRET_KEY = os.getenv('SECRET_KEY', 'secret_key')
     DEBUG = bool(int(os.getenv('DEBUG', '1')))
-    ALLOWED_HOSTS = [os.getenv('ALLOWED_HOSTS', 'localhost')]
     DATABASE_URL = os.getenv('DATABASE_URL', '')
     DATABASE_NAME = os.getenv('DATABASE_NAME', 'algebraic_db')
     ENVIRONMENT = os.getenv('ENVIRONMENT', 'development')

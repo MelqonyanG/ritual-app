@@ -20,6 +20,10 @@ Parameters: page_size and page_number (optional)
 
 Description: Retrieve the history of operations with pagination support.
 
+Request Example:
+
+Get: /history?page_number=1&page_size=2
+
 Response:
 ```
 {
@@ -44,14 +48,19 @@ Response:
 ### /evaluate
 Method: POST
 
-Body: 
+Description: Submit algebraic expressions for evaluation.
+
+
+Request example:
+
+POST: /evaluate
+
+Body (json):
 ```
 {
     "expression": "3 + abs(-5) * len('hello')"
 }
 ```
-
-Description: Submit algebraic expressions for evaluation.
 
 Response:
 ```
@@ -78,4 +87,11 @@ This application is Dockerized and uses Docker Compose for setup. To run the app
 Once the application is running, access the Swagger documentation by navigating to http://your_server_address/docs in your web browser.
 
 This documentation will provide detailed information on the available endpoints, their functionalities, request formats, and response structures.
+
+
+# Testing
+Run test inside the docker container by calling
+```
+python manage.py tests
+```
 
